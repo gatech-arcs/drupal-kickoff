@@ -58,8 +58,8 @@
       "wikimedia/composer-merge-plugin": true
     }
   },
-  "enable-patching": true,
   "extra": {
+    "enable-patching": true,
     "drupal-scaffold": {
       "locations": {
         "web-root": "web/"
