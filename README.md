@@ -1,4 +1,4 @@
-# gtcos_drupal_kickoff
+# GTCoS_Drupal_Kickoff
 ![Visibility: Intentionally Public](https://flat.badgen.net/badge/Visibility/Intentionally%20Public/orange)
 ![Protected Data: None](https://flat.badgen.net/badge/Protected%20Data/None/red)
 
