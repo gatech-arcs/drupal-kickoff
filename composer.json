@@ -1,16 +1,13 @@
 {
-  "name": "gtsciences/gtcos_kickoff",
-  "description": "GT College of Sciences Drupal installer, for a more civilized age",
-  "type": "project",
+  "name": "gtsciences/gt_kickoff",
+  "description": "GT Sciences Drupal installation kickoff, for a more civilized age. Now with recipes",
+  "type": "drupal-project",
   "license": "GPL-2.0-or-later",
-  "homepage": "https://www.drupal.org/project/drupal",
-  "authors": [
-    {
-      "name": "Michael Sheldon, ARCS"
-    }
-  ],
+  "homepage": "https://cos.gatech.edu/",
+  "lifecycle": "experimental",
   "support": {
-    "email": "web@cos.gatech.edu"
+    "docs": "https://www.drupal.org/docs/user_guide/en/index.html",
+    "chat": "https://www.drupal.org/node/314178"
   },
   "repositories": [
     {
@@ -24,27 +21,135 @@
   ],
   "minimum-stability": "dev",
   "prefer-stable": true,
+  "_comment": [
+    "This is how you put comments into a composer.json file https://getcomposer.org/doc/04-schema.md#-comment",
+    "LLM/GPT editorial assistance: https://www.drupal.org/project/ai https://www.drupal.org/project/openai and https://www.drupal.org/project/augmentor https://www.drupal.org/project/auto_alter",
+    "Pending Views Contextual Filter Title fix https://www.drupal.org/project/drupal/issues/2787051",
+    "Math will need to use https://www.drupal.org/project/symfony_mailer or https://www.drupal.org/project/symfony_mailer_lite",
+    "Possible shortcut for profile editing 1:1 with users https://www.drupal.org/project/profile",
+    "Need to inject/update services.yml with security.enable_super_user: false - https://www.drupal.org/node/2910500",
+    "Alt text AI help to check into with campus: https://www.drupal.org/project/metatag_ai",
+    "webforms : https://www.drupal.org/project/antibot",
+    "automatic_updates https://www.drupal.org/project/automatic_updates possibly in future but moving into core",
+    "INVESTIGATE: microcontent vs all custom blocks: https://www.drupal.org/project/microcontent",
+    "INVESTIGATE: Maybe workbench_access instead of group?",
+    "Pending user input on recipe application https://www.drupal.org/project/drupal/issues/3303126",
+    "GROUP is having a lot of issues still https://www.drupal.org/project/group",
+    "no D11:  drupal/admin_toolbar_content -> navigation_extra Pending release",
+    "no D11:  drupal/auto_anchors",
+    "no D11:  drupal/back_to_top",
+    "no D11:  drupal/group",
+    "no D11:  drupal/iframe",
+    "no D11:  drupal/json_field",
+    "no D11:  drupal/layout_builder_iframe_modal",
+    "no D11:  drupal/layout_builder_styles",
+    "no D11:  drupal/lb_direct_add",
+    "no D11:  drupal/oembed_lazyload",
+    "no D11:  drupal/quick_node_clone",
+    "no D11:  drupal/smart_date_starter_kit  -- it's a recipe now, check back",
+    "no D11:  drupal/social_media_links",
+    "no D11:  drupal/views_data_export",
+    "no D11:  drupal/update_helper: ^4.0 -- configuration update helper",
+    "need replacement for Splide.js  drupal/splide: ^1.0"
+  ],
   "require": {
-    "php": ">=8.1",
-    "composer/installers": "^2.2",
-    "cweagans/composer-patches": "^1.7",
-    "drupal/core-composer-scaffold": "^10.1",
-    "drupal/core-recommended": "^10.1",
-    "deployer/deployer": "^7.1",
-    "drush/drush": "^11.5",
-    "gtsciences/gtcos_profile": "^1.0@dev",
-    "oomphinc/composer-installers-extender": "^2.0",
-    "wikimedia/composer-merge-plugin": "^2.0"
+    "php": ">=8.3",
+    "composer/installers": "^2.3",
+    "cweagans/composer-patches": "^2.0@beta",
+    "drupal/core-composer-scaffold": "^10.3",
+    "drupal/core-recommended": "^10.3",
+    "deployer/deployer": "^7.4",
+    "drush/drush": "^13.0",
+    "oomphinc/composer-installers-extender": "^2.0.1",
+    "wikimedia/composer-merge-plugin": "^2.1",
+    
+    "drupal/active_filters": "^1.0",
+    "drupal/address": "^2.0",
+    "drupal/admin_toolbar": "^3.5",
+    "drupal/allowed_formats": "^3.0",
+    "drupal/anchor_link": "^3.0",
+    "drupal/asset_injector": "^2.21",
+    "drupal/bamboo_twig": "^6.0",
+    "drupal/better_exposed_filters": "^7.0",
+    "drupal/blazy": "^3.0",
+    "drupal/block_class": "^3.0",
+    "drupal/ckeditor_codemirror": "^3.1",
+    "drupal/ckeditor5_paste_filter": "^1.0",
+    "drupal/ckeditor_heading_size": "^1.0",
+    "drupal/config_ignore": "^3.3",
+    "drupal/config_inspector": "^2.1",
+    "drupal/config_split": "^2.0",
+    "drupal/crop": "^2.4",
+    "drupal/ctools": "^4.1",
+    "drupal/diff": "^2.0",
+    "drupal/dotenv": "^1.2",
+    "drupal/editoria11y": "^2.1",
+    "drupal/extlink": "^2.0",
+    "drupal/entity_browser": "^2.11",
+    "drupal/entity_reference_revisions": "^1.12",
+    "drupal/field_group": "^3.6",
+    "drupal/focal_point": "^2.1",
+    "drupal/fullcalendar_view": "^5.2",
+    "drupal/gin": "^3.0@RC",
+    "drupal/gin_login": "^2.1",
+    "drupal/gin_toolbar": "^1.0",
+    "drupal/google_tag": "^2.0",
+    "drupal/imagemagick": "^4.0",
+    "drupal/inline_block_title_automatic": "^2.0",
+    "drupal/key": "^1.19",
+    "drupal/layout_builder_operation_link": "^2.2",
+    "drupal/layout_builder_restrictions": "^3.0",
+    "drupal/layout_paragraphs": "^2.0",
+    "drupal/link_attributes": "^2.1",
+    "drupal/linkchecker": "^2.1",
+    "drupal/linkit": "^7.0",
+    "drupal/linkpurpose": "^1.0",
+    "drupal/markdown_easy": "^1.0",
+    "drupal/masquerade": "^2.0",
+    "drupal/matomo": "^2.0@alpha",
+    "drupal/menu_link_attributes": "^1.4",
+    "drupal/metatag": "^2.0",
+    "drupal/module_filter": "^5.0",
+    "drupal/oembed_providers": "^2.2", 
+    "drupal/paragraphs": "1.18",
+    "drupal/pathauto": "^1.13",
+    "drupal/redirect": "^1.10",
+    "drupal/scheduler": "^2.1",
+    "drupal/simple_sitemap": "^4.2.1",
+    "drupal/slick": "^3.0",
+    "drupal/smart_date": "^4.1",
+    "drupal/smart_trim": "^2.2",
+    "drupal/svg_image_field": "^2.3",
+    "drupal/token": "^1.15",
+    "drupal/twig_tweak": "^3.4",
+    "drupal/type_tray": "^1.3",
+    "drupal/view_field": "^3.0@beta",
+    "drupal/views_bulk_edit": "^2.8",
+    "drupal/views_bulk_operations": "^4.2",
+    "gtsciences/gt_sso": "@dev",
+    "gtsciences/gt_tools": "^4.0@dev",
+    "gtsciences/gt": "^1.0@dev",
+    "gtsciences/hg_reader": "^1.0@dev"
   },
   "require-dev": {
-    "drupal/core-dev": "^10.0"
+   "drupal/core-dev": "^10.3",
+    "drupal/backward_compatibility": "^1.0",
+    "drupal/base_field_override_ui": "^1.2",
+    "drupal/devel": "^5.2",
+    "drupal/migrate_plus": "^6.0",
+    "drupal/migrate_source_csv": "^3.6",
+    "drupal/upgrade_status": "^4.3",
+    "drupal/webprofiler": "^10.1",
+    "mglaman/phpstan-drupal": "^1.2",
+    "phpstan/extension-installer": "^1.4",
+    "phpstan/phpstan": "^1.11",
+    "phpstan/phpstan-deprecation-rules": "^1.2"
   },
   "conflict": {
     "drupal/drupal": "*"
   },
   "config": {
     "sort-packages": true,
-    "process-timeout": 0,
     "allow-plugins": {
       "composer/installers": true,
       "cweagans/composer-patches": true,
@@ -53,31 +158,144 @@
       "drupal/*": true,
       "drush/*": true,
       "gtsciences/*": true,
+      "mglaman/phpstan-drupal": true,
       "oomphinc/composer-installers-extender": true,
-      "phpstan/extension-installer": true,
+      "php-http/discovery": true,
+      "phpstan/*": true,
       "wikimedia/composer-merge-plugin": true
     }
   },
+  "enable-patching": true,
+  "autoload": {
+    "files": ["load.environment.php"]
+  },
   "extra": {
-    "enable-patching": true,
     "drupal-scaffold": {
       "locations": {
         "web-root": "web/"
+      },
+      "gitignore": false,
+      "installer-types": [
+        "drupal-library",
+        "drupal-recipe",
+        "npm-asset"
+      ],    "installer-paths": {
+        "[web-root]/core": "type:drupal-core",
+        "[web-root]/profiles/{$name}": "type:drupal-profile",
+        "[web-root]/libraries/{$name}": [
+          "type:drupal-library",
+          "type:npm-asset"
+        ],
+        "[web-root]/modules/contrib/{$name}": "type:drupal-module",
+        "[web-root]/modules/custom/{$name}": "type:drupal-custom-module",
+        "[web-root]/themes/contrib/{$name}": "type:drupal-theme",
+        "[web-root]/themes/custom/{$name}": "type:drupal-custom-theme",
+        "drush/Commands/contrib/{$name}": "type:drupal-drush",
+        "[project-root]/recipes/{$name}": "type:drupal-recipe"
+      },
+      "merge-plugin": {
+        "include": [
+          "[web-root]/profiles/*/composer.json",
+          "[web-root]/libraries/*/composer.json",
+          "[web-root]/modules/contrib/*/composer.json",
+          "[web-root]/modules/custom/*/composer.json",
+          "[web-root]/themes/contrib/*/composer.json",
+          "[web-root]/themes/custom/*/composer.json",
+          "[web-root]/drush/Commands/contrib/*/composer.json",
+          "[project-root]/recipes/*/composer.json"
+        ],
+        "recurse": true,
+        "replace": false,
+        "ignore-duplicates": false,
+        "merge-dev": true,
+        "merge-extra": false,
+        "merge-extra-deep": false,
+        "merge-replace": true,
+        "merge-scripts": false
+      },
+      "enable-patching": true,
+      "composer-exit-on-patch-failure": true,
+      "patchLevel": {
+        "drupal/core": "-p2"
+      },
+      "file-mapping": {
+        "[project-root]/.gitattributes": false,
+        "[project-root]/.editorconfig": {
+          "mode": "replace",
+          "path": "assets/editorconfig",
+          "overwrite": true
+        },
+        "[web-root]/robots.txt": {
+          "path": "assets/robots.txt",
+          "overwrite": false
+        },
+        "[web-root]/android-chrome-192x192.png": {
+          "path": "assets/android-chrome-192x192.png",
+          "overwrite": true
+        },
+        "[web-root]/android-chrome-512x512.png": {
+          "path": "assets/android-chrome-512x512.png",
+          "overwrite": true
+        },
+        "[web-root]/apple-touch-icon.png": {
+          "path": "assets/apple-touch-icon.png",
+          "overwrite": true
+        },
+        "[web-root]/browserconfig.xml": {
+          "path": "assets/browserconfig.xml",
+          "overwrite": true
+        },
+        "[web-root]/favicon.ico": {
+          "path": "assets/favicon.ico",
+          "overwrite": true
+        },
+        "[web-root]/favicon-32x32.png": {
+          "path": "assets/favicon-32x32.png",
+          "overwrite": true
+        },
+        "[web-root]/favicon-48x48.png": {
+          "path": "assets/favicon-48x48.png",
+          "overwrite": true
+        },
+        "[web-root]/mstile-150x150.png": {
+          "path": "assets/mstile-150x150.png",
+          "overwrite": true
+        },
+        "[web-root]/safari-pinned-tab.svg": {
+          "path": "assets/safari-pinned-tab.svg",
+          "overwrite": true
+        },
+        "[web-root]/site.webmanifest": {
+          "path": "assets/site.webmanifest",
+          "overwrite": true
+        }
+      },
+      "installer-name": "gtsciences"
+    },
+    "enable-patching": true,
+    "composer-exit-on-patch-failure": true,
+    "patchLevel": {
+      "drupal/core": "-p2"
+    },
+    "patches": {
+      "drupal/entity_browser": {
+        "3183414 - https://www.drupal.org/node/3183414 - Entity browser modal popup does not close on pressing escape key": "https://www.drupal.org/files/issues/2020-11-19/3183414-2.patch"
       }
     },
-    "installer-paths": {
-      "web/core": "type:drupal-core",
-      "web/profiles/{$name}": "type:drupal-profile",
-      "web/libraries/{$name}": [
-        "type:drupal-library",
-        "type:bower-asset",
-        "type:npm-asset"
-      ],
-      "web/modules/contrib/{$name}": "type:drupal-module",
-      "web/themes/contrib/{$name}": "type:drupal-theme",
-      "drush/Commands/contrib/{$name}": "type:drupal-drush",
-      "web/modules/custom/{$name}": "type:drupal-custom-module",
-      "web/themes/custom/{$name}": "type:drupal-custom-theme"
+    "_patches_check_later": {
+      "drupal/core": {
+        "Allow recipes to be applied": "https://git.drupalcode.org/project/distributions_recipes/-/raw/patch/recipe-10.3.x.patch"
+      },
+      "drupal/drupal": {
+        "Pending MR -- 3276845 - https://www.drupal.org/node/3276845 - MediaSourceBase::getSourceFieldName() doesn't check character max": "https://www.drupal.org/files/issues/2023-02-07/drupal-long_media_source_name-3276845-18.patch"
+      },
+      "drupal/entity_browser": {
+        "2897855 - https://www.drupal.org/node/2897855 - Entity browser modal dialog opens by pressing enter in any text field": "https://www.drupal.org/files/issues/2020-10-07/prevent-entity-browser-from-open-on-enter-key-pressed-2897855-17-reroll-with-improvement.patch",
+        "3183414 - https://www.drupal.org/node/3183414 - Entity browser modal popup does not close on pressing escape key": "https://www.drupal.org/files/issues/2024-01-23/3183414-4854c20620950e32562404f178f8bf9a61ebb1dd-03.patch"
+      },
+      "drupal/anchor_link": {
+        "Anchor button breaks CKEditor5": "https://www.drupal.org/project/anchor_link/issues/3406349"
+      }
     }
   }
 }

@@ -1,0 +1,6 @@
+# https://www.drupal.org/docs/develop/development-tools/phpstan/getting-started
+# https://phpstan.org/config-reference#neon-format
+parameters:
+    level: 1
+    paths:
+        - web/modules/custom
