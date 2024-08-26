@@ -7,7 +7,7 @@ Composer and initial configuration starting point for GT College of Sciences Dru
 
 ## Drupal Recipes
 
-[Drupal Recipes](https://www.drupal.org/docs/8/modules/recipes) are a way to define a set of modules and configuration that can be installed with a single command. This project calls recipes for installing common configuration and modules to allow lifecycle adaptation without being pinned to a specific base profile.
+[Drupal Recipes](https://www.drupal.org/docs/extending-drupal/drupal-recipes) are a way to define a set of modules and configuration that can be installed with a single command. This project calls recipes for installing common configuration and modules to allow lifecycle adaptation without being pinned to a specific base profile.
 
 [Applying Recipes](https://www.drupal.org/project/distributions_recipes)
 
