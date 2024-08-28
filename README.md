@@ -20,7 +20,11 @@ Composer and initial configuration starting point for GT College of Sciences Dru
 ## Useful References
 
 [Composer Patches](https://github.com/cweagans/composer-patches)
+[Composer Recipe Unpack](https://gitlab.ewdev.ca/yonas.legesse/drupal-recipe-unpack)
+[Recipes take inpute in 11.1](https://www.drupal.org/node/3470507)
 
 [![Coding Style: Drupal](https://flat.badgen.net/badge/code%20style/Drupal/f2a)](https://www.drupal.org/docs/develop/standards/php/php-coding-standards)
- [![GitHub Super-Linter Status](https://github.com/gatech-arcs/drupal-kickoff/workflows/Lint%20Code%20Base/badge.svg)](https://github.com/marketplace/actions/super-linter)
- ![Dependabot Status](https://flat.badgen.net/github/dependabot/ubuntu/yaru)
+
+[![GitHub Super-Linter Status](https://github.com/gatech-arcs/drupal-kickoff/workflows/Lint%20Code%20Base/badge.svg)](https://github.com/marketplace/actions/super-linter)
+
+![Dependabot Status](https://flat.badgen.net/github/dependabot/ubuntu/yaru)
