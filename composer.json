@@ -289,9 +289,6 @@
       "drupal/core": "-p2"
     },
     "patches": {
-      "drupal/entity_browser": {
-        "3183414 - https://www.drupal.org/node/3183414 - Entity browser modal popup does not close on pressing escape key": "https://www.drupal.org/files/issues/2020-11-19/3183414-2.patch"
-      }
     },
     "_patches_check_later": {
       "drupal/core": {
