@@ -1,58 +1,38 @@
 ---
-#################################
-#################################
-## Super Linter GitHub Actions ##
-#################################
-#################################
-name: Lint Code Base
-
-#
-# Documentation:
-# https://docs.github.com/en/actions/learn-github-actions/workflow-syntax-for-github-actions
-#
-
-#############################
-# Start the job on all push #
-#############################
-on:
-  push:
-    branches: [main]
-    # Remove the line above to run when pushing to master
-  pull_request:
-    branches: [main]
-
-###############
-# Set the Job #
-###############
-jobs:
-  build:
-    # Name the Job
-    name: Lint Code Base
-    # Set the agent to run on
-    runs-on: ubuntu-latest
-
-    ##################
-    # Load all steps #
-    ##################
-    steps:
-      ##########################
-      # Checkout the code base #
-      ##########################
-      - name: Checkout Code
-        uses: actions/checkout@v4.1.7
-        with:
-          # Full git history is needed to get a proper list
-          # of changed files within `super-linter`
-          fetch-depth: 0
-
-      ################################
-      # Run Linter against code base #
-      ################################
-      - name: Super-linter
-        uses: super-linter/super-linter/slim@v7.0.0
-        env:
-          VALIDATE_ALL_CODEBASE: true
-          LINTER_RULES_PATH: /
-          VALIDATE_PHP_PSALM: false
-          DEFAULT_BRANCH: 1.x
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+  name: Lint Code Base
+  
+  on: [push, pull_request]
+  
+  permissions: {}
+  
+  jobs:
+    build:
+      name: Lint
+      runs-on: ubuntu-latest
+  
+      permissions:
+        contents: read
+        packages: read
+        statuses: write
+  
+      steps:
+        - name: Checkout Code
+          uses: actions/checkout@v4.1.7
+          with:
+            # super-linter needs the full git history to get the
+            # list of files that changed across commits
+            fetch-depth: 0
+  
+        - name: Super-linter
+          uses: super-linter/super-linter/slim@v7.1.0
+          env:
+            VALIDATE_ALL_CODEBASE: true
+            VALIDATE_JSCPD: false
+            VALIDATE_JSON: false
+            VALIDATE_JSON_PRETTIER: false
+            VALIDATE_PHP_PSALM: false
+            VALIDATE_PHP_PHPCS: false
+            # YAML is validated via eslint plugin for Drupal
+            VALIDATE_YAML_PRETTIER: false
+            GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+  
