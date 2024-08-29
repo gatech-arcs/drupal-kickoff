@@ -1,5 +1,5 @@
 {
-  "name": "gtsciences/kickoff",
+  "name": "gtsciences/gt_kickoff",
   "description": "GT College of Sciences Drupal installation kickoff, for a more civilized age. Now with recipes",
   "type": "drupal-project",
   "license": "GPL-2.0-or-later",
@@ -115,6 +115,7 @@
     "drupal/linkpurpose": "^1.0",
     "drupal/markdown_easy": "^1.0",
     "drupal/masquerade": "^2.0",
+    "drupal/maxlength": "^3.1",
     "drupal/matomo": "^2.0@alpha",
     "drupal/menu_link_attributes": "^1.4",
     "drupal/metatag": "^2.0",
