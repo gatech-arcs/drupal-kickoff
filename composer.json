@@ -4,7 +4,7 @@
     "type": "project",
     "license": "GPL-2.0-or-later",
     "homepage": "https://cos.gatech.edu/",
-    "lifecycle": "experimental",
+    "lifecycle": "stable",
     "support": {
         "docs": "https://www.drupal.org/docs/user_guide/en/index.html",
         "chat": "https://www.drupal.org/node/314178"
@@ -93,7 +93,7 @@
     },
     "require-dev": {
         "drupal/core-dev": "^11.1",
-        "drupal/backward_compatibility": "^1.0",
+        "drupal/coder": "^8.3",
         "drupal/devel": "^5.3",
         "drupal/migrate_plus": "^6.0",
         "drupal/migrate_source_csv": "^3.6",
@@ -142,7 +142,8 @@
             ],
             "installer-paths": {
                 "web/core": ["type:drupal-core"],
-                "web/profiles/{$name}": ["type:drupal-profile"],
+                "web/profiles/contrib/{$name}": ["type:drupal-profile"],
+                "web/profiles/custom/{$name}": ["type:drupal-custom-profile"],
                 "web/libraries/ckeditor5-anchor-drupal": [
                     "npm-asset/northernco--ckeditor5-anchor-drupal"
                 ],
@@ -153,7 +154,6 @@
                 ],
                 "web/modules/contrib/{$name}": ["type:drupal-module"],
                 "web/modules/custom/{$name}": ["type:drupal-custom-module"],
-                "web/profiles/contrib/{$name}": ["type:drupal-profile"],
                 "web/themes/contrib/{$name}": ["type:drupal-theme"],
                 "web/themes/custom/{$name}": ["type:drupal-custom-theme"],
                 "drush/Commands/contrib/{$name}": ["type:drupal-drush"],
