@@ -69,7 +69,7 @@
         "composer/installers": "^2.3",
         "cweagans/composer-patches": "^2.0@beta",
         "drupal/core-composer-scaffold": "^11.1",
-        "drupal/core-recommended": "^11.1",
+        "drupal/core": "^11.1",
         "deployer/deployer": "^7.5",
         "drush/drush": "^13.3",
         "composer/unpack": "dev-master",
