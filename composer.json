@@ -46,7 +46,6 @@
         "if we need to just show external JSON data as read-only drupal/views_json_source: ^2.0",
 
         "no D11:    drupal/lb_direct_add",
-        "drupal/linkchecker: ^2.1 -- needs full d11 release",
         "no D11:    drupal/social_media_links",
         "MAIL FOR MATH:    drupal/symfony_mailer: ^1.5 vs drupal/symfony_mailer_lite: ^2.0",
 
@@ -58,7 +57,11 @@
         "allowed_formats should move to core, someday https://www.drupal.org/project/drupal/issues/3323007",
         "in case needed again later drupal/bamboo_twig: ^6.0",
 
-        "DEV - DCG reference https://github.com/Chi-teck/drupal-code-generator"
+        "DEV - DCG reference https://github.com/Chi-teck/drupal-code-generator",
+
+        "redirect_after_login may be useful once D11 compat",
+
+        "possible config help drupal/update_helper and drupal/config_modify"
     ],
 
     "minimum-stability": "dev",
@@ -83,7 +86,6 @@
         "gtsciences/gt-sso": "*",
         "gtsciences/gt-admin": "*",
 
-
         "gtsciences/gt_tools": "^1.0",
 
         "gtsciences/gt_theme": "^1.0",
@@ -94,10 +96,12 @@
     "require-dev": {
         "drupal/core-dev": "^11.1",
         "drupal/coder": "^8.3",
+        "drupal/content_export_csv": "^4.7",
         "drupal/devel": "^5.3",
         "drupal/migrate_plus": "^6.0",
-        "drupal/migrate_source_csv": "^3.6",
+        "drupal/migrate_source_csv": "^3.7",
         "drupal/upgrade_status": "^4.3",
+        "drupal/views_data_export": "^1.5",
         "drupal/webprofiler": "^11.1",
         "chi-teck/drupal-code-generator": "^4.1",
         "kevinquillen/recipe-generator": "^2.0",
@@ -163,16 +167,6 @@
                 "include": [ "web/modules/contrib/*/composer.libraries.json" ]
             },
             "file-mapping": {
-                "[project-root]/.gitattributes": false,
-                "[project-root]/.editorconfig": {
-                    "mode": "replace",
-                    "path": "assets/editorconfig",
-                    "overwrite": true
-                },
-                "web/robots.txt": {
-                    "path": "assets/robots.txt",
-                    "overwrite": false
-                },
                 "web/android-chrome-192x192.png": {
                     "path": "assets/android-chrome-192x192.png",
                     "overwrite": true
