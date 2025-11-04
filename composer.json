@@ -42,7 +42,8 @@
 
         "redirect_after_login may be useful once D11 compat",
         "possible config help drupal/update_helper and drupal/config_modify",
-        " temp removal of gtsciences/gt_social for testing"
+        "temp removal of gtsciences/gt_social for testing",
+        "no d11 - drupal/content_export_csv: ^4.8"
     ],
 
     "minimum-stability": "dev",
@@ -73,7 +74,6 @@
     "require-dev": {
         "drupal/core-dev": "^11.2",
         "drupal/coder": "^8.3",
-        "drupal/content_export_csv": "^4.8",
         "drupal/devel": "^5.4",
         "drupal/migrate_plus": "^6.0",
         "drupal/migrate_source_csv": "^3.7",
