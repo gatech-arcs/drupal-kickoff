@@ -1,6 +1,6 @@
 {
   "extends": [
-    "airbnb-base",
+    "drupalSettings",
     "plugin:prettier/recommended",
     "plugin:yml/recommended"
   ],
