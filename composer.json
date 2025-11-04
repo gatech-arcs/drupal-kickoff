@@ -17,10 +17,6 @@
         {
             "type": "composer",
             "url": "https://asset-packagist.org"
-        },
-        {
-            "type": "vcs",
-            "url": "https://github.com/woredeyonas/Drupal-Recipe-Unpack.git"
         }
     ],
     "_comment": [
@@ -30,9 +26,6 @@
         "Need to inject/update services.yml with security.enable_super_user: false - https://www.drupal.org/node/2910500",
 
         "DEV - DCG reference https://github.com/Chi-teck/drupal-code-generator",
-
-        "Lots of Changes for 11.2 restraint: https://www.drupal.org/blog/drupal-11-2-0",
-        "D11.2 Recipe Unpacking https://www.drupal.org/project/drupal_cms/issues/3524255",
 
         "Pending Views Contextual Filter Title fix https://www.drupal.org/project/drupal/issues/2787051",
 
@@ -48,7 +41,8 @@
         "INVESTIGATE:    drupal/tvi for taxonomy display control",
 
         "redirect_after_login may be useful once D11 compat",
-        "possible config help drupal/update_helper and drupal/config_modify"
+        "possible config help drupal/update_helper and drupal/config_modify",
+        " temp removal of gtsciences/gt_social for testing"
     ],
 
     "minimum-stability": "dev",
@@ -63,7 +57,6 @@
         "drupal/core-recipe-unpack": "^11.2",
         "deployer/deployer": "^7.5",
         "drush/drush": "^13.6",
-        "composer/unpack": "dev-master",
         "oomphinc/composer-installers-extender": "^2.0",
         "webflo/drupal-finder": "^1.3",
         "wikimedia/composer-merge-plugin": "^2.1",
@@ -71,18 +64,15 @@
         "gtsciences/gt_standard": "*",
         "gtsciences/gt_sso": "^1.0",
         "gtsciences/gt_admin": "*",
-
         "gtsciences/gt_tools": "^1.0",
-
         "gtsciences/gt_theme": "^1.0",
         "gtsciences/gt_editorial": "*",
         "gtsciences/gt_seo": "*",
-        "gtsciences/gt_social": "*",
         "gtsciences/hg_reader": "^5.0"
     },
     "require-dev": {
         "drupal/core-dev": "^11.2",
-        "drupal/coder": "^8.3.31",
+        "drupal/coder": "^8.3",
         "drupal/content_export_csv": "^4.8",
         "drupal/devel": "^5.4",
         "drupal/migrate_plus": "^6.0",
@@ -109,7 +99,6 @@
             "deployer/deployer": true,
             "drupal/*": true,
             "drush/*": true,
-            "ewcomposer/unpack": true,
             "gtsciences/*": true,
             "kevinquillen/*": true,
             "mglaman/phpstan-drupal": true,
