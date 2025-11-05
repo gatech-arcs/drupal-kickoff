@@ -50,7 +50,7 @@
     "prefer-stable": true,
 
     "require": {
-        "php": ">=8.3",
+        "php": "^8.3",
         "composer/installers": "^2.3",
         "cweagans/composer-patches": "^2.0",
         "drupal/core": "^11.2",
