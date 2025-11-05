@@ -114,78 +114,72 @@
         "drupal-scaffold": {
             "locations": {
                 "web-root": "web/"
-            },
-            "gitignore": false,
-            "installer-types": [
-                "bower-asset",
-                "npm-asset"
+            }
+        },
+        "installer-paths": {
+            "web/core": ["type:drupal-core"],
+            "web/profiles/contrib/{$name}": ["type:drupal-profile"],
+            "web/profiles/custom/{$name}": ["type:drupal-custom-profile"],
+            "web/libraries/{$name}": [
+                "type:drupal-library",
+                "type:bower-asset",
+                "type:npm-asset"
             ],
-            "installer-paths": {
-                "web/core": ["type:drupal-core"],
-                "web/profiles/contrib/{$name}": ["type:drupal-profile"],
-                "web/profiles/custom/{$name}": ["type:drupal-custom-profile"],
-                "web/libraries/{$name}": [
-                    "type:drupal-library",
-                    "type:bower-asset",
-                    "type:npm-asset"
-                ],
-                "web/modules/contrib/{$name}": ["type:drupal-module"],
-                "web/modules/custom/{$name}": ["type:drupal-custom-module"],
-                "web/themes/contrib/{$name}": ["type:drupal-theme"],
-                "web/themes/custom/{$name}": ["type:drupal-custom-theme"],
-                "drush/Commands/contrib/{$name}": ["type:drupal-drush"],
-                "recipes/{$name}": ["type:drupal-recipe"]
+            "web/modules/contrib/{$name}": ["type:drupal-module"],
+            "web/modules/custom/{$name}": ["type:drupal-custom-module"],
+            "web/themes/contrib/{$name}": ["type:drupal-theme"],
+            "web/themes/custom/{$name}": ["type:drupal-custom-theme"],
+            "drush/Commands/contrib/{$name}": ["type:drupal-drush"],
+            "recipes/{$name}": ["type:drupal-recipe"]
+        },
+        "merge-plugin": {
+            "include": [ "web/modules/contrib/*/composer.libraries.json" ]
+        },
+        "file-mapping": {
+            "web/android-chrome-192x192.png": {
+                "path": "assets/android-chrome-192x192.png",
+                "overwrite": true
             },
-            "merge-plugin": {
-                "include": [ "web/modules/contrib/*/composer.libraries.json" ]
+            "web/android-chrome-512x512.png": {
+                "path": "assets/android-chrome-512x512.png",
+                "overwrite": true
             },
-            "file-mapping": {
-                "web/android-chrome-192x192.png": {
-                    "path": "assets/android-chrome-192x192.png",
-                    "overwrite": true
-                },
-                "web/android-chrome-512x512.png": {
-                    "path": "assets/android-chrome-512x512.png",
-                    "overwrite": true
-                },
-                "web/apple-touch-icon.png": {
-                    "path": "assets/apple-touch-icon.png",
-                    "overwrite": true
-                },
-                "web/browserconfig.xml": {
-                    "path": "assets/browserconfig.xml",
-                    "overwrite": true
-                },
-                "web/favicon.ico": {
-                    "path": "assets/favicon.ico",
-                    "overwrite": true
-                },
-                "web/favicon-16x16.png": {
-                    "path": "assets/favicon-16x16.png",
-                    "overwrite": true
-                },
-                "web/favicon-32x32.png": {
-                    "path": "assets/favicon-32x32.png",
-                    "overwrite": true
-                },
-                "web/mstile-150x150.png": {
-                    "path": "assets/mstile-150x150.png",
-                    "overwrite": true
-                },
-                "web/mstile-310x310.png": {
-                    "path": "assets/mstile-310x310.png",
-                    "overwrite": true
-                },
-                "web/safari-pinned-tab.svg": {
-                    "path": "assets/safari-pinned-tab.svg",
-                    "overwrite": true
-                },
-                "web/site.webmanifest": {
-                    "path": "assets/site.webmanifest",
-                    "overwrite": true
-                }
+            "web/apple-touch-icon.png": {
+                "path": "assets/apple-touch-icon.png",
+                "overwrite": true
             },
-            "installer-name": "gtsciences"
+            "web/browserconfig.xml": {
+                "path": "assets/browserconfig.xml",
+                "overwrite": true
+            },
+            "web/favicon.ico": {
+                "path": "assets/favicon.ico",
+                "overwrite": true
+            },
+            "web/favicon-16x16.png": {
+                "path": "assets/favicon-16x16.png",
+                "overwrite": true
+            },
+            "web/favicon-32x32.png": {
+                "path": "assets/favicon-32x32.png",
+                "overwrite": true
+            },
+            "web/mstile-150x150.png": {
+                "path": "assets/mstile-150x150.png",
+                "overwrite": true
+            },
+            "web/mstile-310x310.png": {
+                "path": "assets/mstile-310x310.png",
+                "overwrite": true
+            },
+            "web/safari-pinned-tab.svg": {
+                "path": "assets/safari-pinned-tab.svg",
+                "overwrite": true
+            },
+            "web/site.webmanifest": {
+                "path": "assets/site.webmanifest",
+                "overwrite": true
+            }
         },
         "enable-patching": true,
         "composer-exit-on-patch-failure": true,
