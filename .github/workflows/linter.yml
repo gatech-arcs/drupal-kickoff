@@ -8,7 +8,7 @@ on: # yamllint disable-line rule:truthy
 permissions: {}
 jobs:
   build:
-    name: Lint
+    name: Lint Drupal Code
     runs-on: ubuntu-latest
 
     permissions:
@@ -23,18 +23,40 @@ jobs:
           fetch-depth: 0
           persist-credentials: false
 
+      - name: Setup PHP
+        uses: shivammathur/setup-php@bf6b4fbd49ca58e4608c9c89fba0b8d90bd2a39f # v2.35.5
+        with:
+          php-version: '8.3'
+          extensions: imagick, gd, intl, mbstring, mysqli, pdo, pdo_mysql, zip, xml, curl
+          tools: composer:v2, phpstan:v2
+
+      - name: Install Composer Dependencies
+        run: composer install --prefer-dist --no-progress --no-suggest
+
+      - name: Install Drupal PHPCS Standards
+        run: |
+          composer global require drupal/coder
+          phpcs --config-set installed_paths $HOME/.composer/vendor/drupal/coder/coder_sniffer
+
+      - name: Run PHPCS (Drupal Standards)
+        run: |
+          phpcs --standard=Drupal --extensions=php,module,inc,install,test,profile,theme ./modules ./themes ./profiles ./src ../recipes
+
       - name: Super-linter
-        uses: super-linter/super-linter/slim@12150456a73e248bdc94d0794898f94e23127c88 # 7.4.0
-        # uses: super-linter/super-linter/slim@2bdd90ed3262e023ac84bf8fe35dc480721fc1f2 # v8.2.1
+        # uses: super-linter/super-linter/slim@12150456a73e248bdc94d0794898f94e23127c88 # 7.4.0
+        uses: super-linter/super-linter/slim@2bdd90ed3262e023ac84bf8fe35dc480721fc1f2 # v8.2.1
+        # Injecting new esline.config.js attempt to use 8.2.1
         # Can't move on to super-linter v8.x yet due to Drupal core still using airbnb-base eslint config
         # https://www.drupal.org/project/drupal/issues/3440225
         # https://github.com/super-linter/super-linter/blob/main/docs/upgrade-guide.md#removed-eslint-plugins-and-configurations
 
         env:
+          VALIDATE_ALL_CODEBASE: true
           FILTER_REGEX_EXCLUDE: .*vendor/.*|.*node_modules/.*
           LINTER_RULES_PATH: .github/linters
           PHP_CONFIG_FILE: .github/linters/php.ini
           VALIDATE_BIOME_FORMAT: false
+          VALIDATE_GIT_COMMITLINT: false
           VALIDATE_JAVASCRIPT_PRETTIER: false
           VALIDATE_JSCPD: false
           VALIDATE_JSON_PRETTIER: false
