@@ -43,7 +43,8 @@
         "redirect_after_login may be useful once D11 compat",
         "possible config help drupal/update_helper and drupal/config_modify",
         "temp removal of gtsciences/gt_social for testing",
-        "no d11 - drupal/content_export_csv: ^4.8"
+        "no d11 - drupal/content_export_csv: ^4.8",
+        "scheduling option? https://www.drupal.org/project/scheduled_transitions"
     ],
 
     "minimum-stability": "dev",

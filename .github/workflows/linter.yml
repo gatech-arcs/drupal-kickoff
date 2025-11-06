@@ -31,7 +31,9 @@ jobs:
         # https://github.com/super-linter/super-linter/blob/main/docs/upgrade-guide.md#removed-eslint-plugins-and-configurations
 
         env:
+          FILTER_REGEX_EXCLUDE: .*vendor/.*|.*node_modules/.*
           LINTER_RULES_PATH: .github/linters
+          PHP_CONFIG_FILE: .github/linters/php.ini
           VALIDATE_BIOME_FORMAT: false
           VALIDATE_JAVASCRIPT_PRETTIER: false
           VALIDATE_JSCPD: false
