@@ -31,7 +31,9 @@ jobs:
           tools: composer:v2, phpstan:v2
 
       - name: Install Composer Dependencies
-        run: composer install --prefer-dist --no-progress --no-suggest
+        run: |
+          composer install --prefer-dist --no-progress --no-suggest
+          composer config allow-plugins.dealerdirect/phpcodesniffer-composer-installer true
 
       - name: Install Drupal PHPCS Standards
         run: |
