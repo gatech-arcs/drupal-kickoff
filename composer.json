@@ -65,7 +65,7 @@
         "gtsciences/gt_standard": "*",
         "gtsciences/gt_sso": "^1.0",
         "gtsciences/gt_admin": "*",
-        "gtsciences/gt_theme": "^1.0",
+        "gtsciences/gt_theme": "^2.0",
         "gtsciences/gt_editorial": "*",
         "gtsciences/gt_seo": "*",
         "gtsciences/hg_reader": "^5.0"
