@@ -13,12 +13,21 @@ Composer and initial configuration starting point for GT College of Sciences Dru
 
 ## Will call recipes and modules
 
-- gtsciences/gt-standard -- Recipe for common core modules and configuration
-- gtsciences/gt-sso -- Recipe for GT SSO logins
-- gtsciences/gt-seo-social -- Recipe for SEO and social linking utilities
-- gtsciences/gt_theme -- modified from IC's GT theme
-- gtsciences/gt_tools -- to help with compatibility with campus builds
-- gtsciences/hg-reader -- Mercury Syndication module using core media
+- gtsciences/gt-standard &mdash; Recipe for common core modules and configuration
+- gtsciences/gt-sso &mdash; GT SSO auth integration
+- gtsciences/gt-admin &mdash; Admin UX and tools
+- gtsciences/gt-seo &mdash; Basic SEO settings
+- gtsciences/gt_theme &mdash; Modified from IC's GT theme
+- gtsciences/gt_tools &mdash; Helps with compatibility with campus builds
+- gtsciences/hg-reader &mdash; Mercury Syndication module using core media
+
+### Optional Recipes to include as needed
+
+Not all sites will need everything, so some are not included by default:
+
+- gtsciences/gt-ai &mdash; Wrapper for the AI tools already available in Drupal
+- gtsciences/gt-social &mdash; Recipe for SEO and social linking utilities
+- gtsciences/gt-webform &mdash; Webform integration, should be seldom used
 
 ## Useful References
 
