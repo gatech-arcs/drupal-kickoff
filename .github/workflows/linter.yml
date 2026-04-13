@@ -46,7 +46,8 @@ jobs:
 
       - name: Super-linter
         # uses: super-linter/super-linter/slim@12150456a73e248bdc94d0794898f94e23127c88 # 7.4.0
-        uses: super-linter/super-linter/slim@2bdd90ed3262e023ac84bf8fe35dc480721fc1f2 # v8.2.1
+        # uses: super-linter/super-linter/slim@2bdd90ed3262e023ac84bf8fe35dc480721fc1f2 # v8.2.1
+        uses: super-linter/super-linter/slim@9e863354e3ff62e0727d37183162c4a88873df41 # v8.6.0
         # Injecting new esline.config.js attempt to use 8.2.1
         # Can't move on to super-linter v8.x yet due to Drupal core still using airbnb-base eslint config
         # https://www.drupal.org/project/drupal/issues/3440225
