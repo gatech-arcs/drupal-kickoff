@@ -96,7 +96,6 @@
             "chi-teck/drupal-code-generator": true,
             "cweagans/composer-patches": true,
             "dealerdirect/phpcodesniffer-composer-installer": true,
-            "deployer/deployer": true,
             "drupal/*": true,
             "drush/*": true,
             "gtsciences/*": true,
