@@ -23,6 +23,8 @@
         "This is how you put comments into a composer.json file https://getcomposer.org/doc/04-schema.md#-comment",
         "composer/installers reference https://github.com/composer/installers",
 
+        "D11.4 adds HTM5 validation disablement option https://www.drupal.org/node/3537128",
+
         "Need to inject/update services.yml with security.enable_super_user: false - https://www.drupal.org/node/2910500",
 
         "DEV - DCG reference https://github.com/Chi-teck/drupal-code-generator",
